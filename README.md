@@ -11,11 +11,11 @@
 - [ ] 验证码
 - [ ] 单元测试
 - [ ] 数据库迁移
-- [ ] 数据填充
+- [ ] 数据填充 faker
 
 使用的composer包
 
-composer require topthink/think-migration=1.*
+composer require topthink/think-migration=2.0.*
 
 composer require --dev symfony/var-dumper
 
