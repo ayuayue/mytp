@@ -15,11 +15,26 @@
 
 return [
     // 驱动方式
-    'type'   => 'File',
-    // 缓存保存目录
-    'path'   => '',
-    // 缓存前缀
-    'prefix' => '',
-    // 缓存有效期 0表示永久缓存
-    'expire' => 0,
+    'type'   => 'complex',
+//    'default' => [
+//        // 驱动方式
+//        'type' => 'File',
+//        // 缓存保存目录
+//        'path' => CACHE_PATH,
+//    ],
+    // 文件缓存
+    'file' => [
+        // 驱动方式
+        'type' => 'file',
+        // 设置不同的缓存保存目录
+        'path' => ''
+    ],
+    // redis缓存
+    'default' => [
+        // 驱动方式
+        'type' => 'redis',
+        // 服务器地址
+        'host' => Env::get('redis.host'), // 本地环境先开启redis服务端 redis-service.exe
+        'port' => Env::get('redis.port'),
+    ]
 ];
